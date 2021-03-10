@@ -23,5 +23,5 @@ export default async function handler(req, res) {
   cookies.set('rachio-auth', 'abc', { signed: true })
 
   // Rest of the API logic
-  res.json({ message: 'Hello Everyone!' })
+  res.json({ message: `${req.query.toString()}` })
 }
